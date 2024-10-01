@@ -7,17 +7,20 @@
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <script src="script.js" defer></script> 
-  <a href="https://www.flaticon.com/free-icons/shopping-cart" title="shopping cart icons">Shopping cart icons created by Iconpro86 - Flaticon</a>
 </head>
 <body>
   <header class="header">
     <nav class="navbar">
-      <a href="index.html" class="logo">C Market</a>
-      <div class="dropdown">
-        <a href="#">NEW</a>
+      <div class="logo-c">
+        <a href="index.html" class="logo"><span class="c-letter">C</span>
+          <span class="mart">MARKET</span>
+        </a>
       </div>
       <div class="dropdown">
-        <a href="#">MEN</a>
+        <a href="#">New</a>
+      </div>
+      <div class="dropdown">
+        <a href="#">Men</a>
         <div class="dropdown-content">
           <a href="ai-information.html">Men Clothing</a>
           <a href="#">Men's Shoes</a>
@@ -25,7 +28,7 @@
         </div>
       </div>
       <div class="dropdown">
-        <a href="#">WOMEN</a>
+        <a href="#">Women</a>
         <div class="dropdown-content">
           <a href="ai-information.html">Women's Clothing</a>
           <a href="#">Women's Shoes</a>
@@ -33,7 +36,7 @@
         </div>
       </div>
       <div class="dropdown">
-        <a href="#">APPLIANCES</a>
+        <a href="#">Appliances</a>
         <div class="dropdown-content">
           <a href="ai-information.html">Computers</a>
           <a href="#">Cell-Phones</a>
@@ -41,23 +44,23 @@
           <a href="#">Home Electronic Appliances</a>
         </div>
       </div>
-      <a href="about.html" class="scroll-link">ABOUT</a>
-      <a href="#">CONTACT</a>
+      <a href="about.html" class="scroll-link">About</a>
+      <a href="#">Contact</a>
     </nav>
-    <hr> <!-- Line separating header from content -->
+ 
     <div class="header-icons">
       <div class="social-icons">
-        <a href="#"><i class='bx bxs-cart'></i></a>
-        <a href="#" class="user-icon"><i class='bx bx-user'></i></a>
+        <a href="#" aria-label="Shopping Cart"><i class='bx bxs-cart'></i></a>
+        <a href="#" class="user-icon" aria-label="User Profile"><i class='bx bx-user'></i></a>
       </div>
-      <form action="#" class="search-bar">
-        <input type="text" placeholder="Find the best deals...">
+      <form action="#" class="search-bar" method="get">
+        <input type="text" placeholder="Find the best deals..." aria-label="Search">
         <button type="submit"><i class='bx bx-search'></i></button>
       </form>
     </div>
   </header>
   
-  <div class="container">
+  <main class="container">
     <div class="content">
       <h2 class="logo">C Market</h2>
       <div class="text-sci">
@@ -65,17 +68,17 @@
         <p>We help you compare prices across various sellers to ensure you get the best deals on your desired products. Shop smart, save big!</p>
         <button class="start-btn">Compare Prices</button> 
         <div class="social-icons">
-          <a href="#"><i class='bx bxl-facebook'></i></a>
-          <a href="#"><i class='bx bxl-twitter'></i></a>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+          <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+          <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
         </div>
       </div>
-      <img src="your-image-url.jpg" alt="Description of the image" class="container-image"> <!-- Add your image here -->
     </div>
 
-    <div class="logreg-box">
+    <aside class="logreg-box">
       <div class="form-box login">
-        <form action="#">
+        <form action="#" method="post">
           <h2>Sign in</h2>
           <div class="input-box">
             <span class="icon"><i class='bx bxs-envelope'></i></span>
@@ -104,7 +107,7 @@
       </div>
 
       <div class="form-box register">
-        <form action="#">
+        <form action="#" method="post">
           <h2>Sign Up</h2>
           <div class="input-box">
             <span class="icon"><i class='bx bxs-user'></i></span>
@@ -136,22 +139,24 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
+    </aside>
+  </main>
 
   <div class="boxes-container">
     <div class="box women">
-      <h3>Women</h3>
+      <div class="text-box">Women</div>
     </div>
     <div class="box men">
-      <h3>Men</h3>
+      <div class="text-box">Men</div>
     </div>
     <div class="box accessories">
-      <h3>Accessories & Appliances</h3>
+      <div class="text-box">Accessories</div>
+    </div>
+    <div class="box appliances">
+      <div class="text-box">Appliances</div>
     </div>
   </div>
   
-
   <footer>
     <p>&copy; 2024 PriceCompare. All rights reserved.</p>
   </footer>

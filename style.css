@@ -9,7 +9,7 @@
 }
 
 body {
-  background: rgb(13, 3, 58);
+  background: rgb(255, 255, 255)
 }
 
 .header {
@@ -36,7 +36,7 @@ body {
     font-family: 'Montserrat', sans-serif; /* Choose a font */
     font-weight: bold; /* Make it bold */
     font-size: 48px; /* Adjust size as needed */
-    color: darkmagenta; /* Primary color */
+    color: rgb(13, 3, 58);; /* Primary color */
    filter: drop-shadow(0 0 5px white);
 }
 
@@ -47,7 +47,7 @@ body {
   font-family: 'Montserrat', sans-serif; /* Choose a font */
   font-weight: bold; /* Make it bold */
   font-size: 16px; /* Adjust size as needed */
-  color: darkmagenta; /* Primary color */
+  color: rgb(13, 3, 58);; /* Primary color */
   filter: drop-shadow(0 0 5px white);
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .mart {
-  color: darkmagenta; /* Color for MART */
+  color: rgb(13, 3, 58);; /* Color for MART */
   margin-left: 10px; /* Space between c and MART */
 }
 .navbar {
@@ -67,15 +67,15 @@ body {
 .navbar a {
   position: relative;
   font-size: 15px;
-  color: white;
+  color: rgb(13, 3, 58);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   margin-right: 30px;
   padding: 10px 0; /* Optional: Add some vertical padding for better alignment */
 }
 
 .navbar a::after {
-  content: '';
+  content: rgb(13, 3, 58);
   position: absolute;
   left: 0;
   width: 100%;
@@ -110,7 +110,7 @@ body {
   width: 250px;
   height: 40px; /* Ensure the height of the search bar matches the icon size */
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid rgb(13, 3, 58);;
   border-radius: 6px;
   padding: 0 10px; /* Add padding inside the search bar to prevent text from touching the edges */
   box-sizing: border-box; /* Ensure padding doesn't overflow the container */
@@ -132,7 +132,7 @@ body {
   border: none;
   outline: none;
   font-size: 16px;
-  color: #e4e4e4;
+  color: rgb(13, 3, 58);;
   padding-left: 10px;
 }
 
@@ -147,11 +147,11 @@ body {
 
 .search-bar i {
   font-size: 22px;
-  color: #e4e4e4;
+  color: rgb(13, 3, 58);;
 }
 
 .search-bar input::placeholder {
-  color: #e4e4e4;
+  color: rgb(13, 3, 58);;
 }
 
 .container 
@@ -707,4 +707,3 @@ input:focus {
     margin-bottom: 20px; /* Space between stacked boxes */
   }
 }
-

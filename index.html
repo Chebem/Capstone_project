@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +44,6 @@
           <a href="#">Home Electronic Appliances</a>
         </div>
       </div>
-      <a href="c-market.html"class="scroll-link">C-Market</a>
       <a href="about.html" class="scroll-link">About</a>
       <a href="#">Contact</a>
     </nav>
@@ -68,7 +66,9 @@
       <div class="text-sci">
         <h1>Find the Best Prices!</h1>
         <p>We help you compare prices across various sellers to ensure you get the best deals on your desired products. Shop smart, save big!</p>
-        <button class="start-btn">Compare Prices</button> 
+        <a href="#" onclick="scrollToProducts()">
+          <button class="start-btn">Compare Prices</button>
+        </a>
         <div class="social-icons">
           <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
           <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
@@ -142,8 +142,34 @@
         </form>
       </div>
     </aside>
+
+   
+  
   </main>
 
+  <div class="chatbot-container">
+    <div id="chatbot" class="floating-chat">
+      <button id="chatbot-toggle" aria-label="Chat with us">
+        <i class='bx bxs-chat'></i>
+      </button>
+      <span class="chat-tooltip">Chat with us!</span>
+    </div>
+
+
+    <!-- Chatbox popup -->
+    <div class="chatbox">
+      <div class="chatbox-header">
+        <h3>Chat with us</h3>
+        <button class="close-chatbox">X</button>
+      </div>
+      <div id="chatbox-messages" class="chatbox-messages"></div>
+      <div class="chatbox-input">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+  
   <div class="boxes-container">
     <div class="box women">
       <div class="text-box">Women</div>
@@ -158,6 +184,69 @@
       <div class="text-box">Appliances</div>
     </div>
   </div>
+
+
+  <section id="item-gallery" class="item-gallery">
+    <h2>Items for Sale</h2>
+    <div class="product-scroller">
+      <button id="scrollLeft" onclick="scrollLeft()">◀</button>
+      <div class="product-grid">
+        <div class="product">
+          <a href="compare_price.html?product=purse"> <!-- Link to the product detail page -->
+            <img src="icons/purse.jpeg" alt="Heart-Shaped Purse">
+            <h2>Heart-Shaped Purse</h2>
+            <p>Heart-Shaped Purse (Black)</p>
+            <p class="price">From ₩10,000</p>
+          </a>
+        </div>
+  
+        <div class="product">
+          <a href="compare_price.html?product=airpodcase"> <!-- Link to the product detail page -->
+            <img src="icons/airpodcase.jpeg" alt="Apple Airpod Case">
+            <h2>Apple Airpod Case</h2>
+            <p>Peach Juice Airpod Case</p>
+            <p class="price">From ₩33,000</p>
+          </a>
+        </div>
+  
+        <div class="product">
+          <a href="compare_price.html?product=phonecase"> <!-- Link to the product detail page -->
+            <img src="icons/phonecase.jpeg" alt="Heart-Shaped Purse">
+            <h2>Galaxy S22+ Case</h2>
+            <p>Galaxy S22+ Phone Case, abstract base design</p>
+            <p class="price">From ₩10,000</p>
+          </a>
+        </div>
+
+        <div class="product">
+          <a href="compare_price.html?product=handbag"> <!-- Link to the product detail page -->
+            <img src="icons/handbag.jpeg" alt="Heart-Shaped Purse">
+            <h2>Pink Ribbon Bag</h2>
+            <p>BlackPink Pink Shaped Ribbon bag</p>
+            <p class="price">From ₩10,000</p>
+          </a>
+        </div>
+  
+        <div class="product">
+          <a href="compare_price.html?product=bag"> <!-- Link to the product detail page -->
+            <img src="icons/bag.jpeg" alt="Heart-Shaped Purse">
+            <h2>Cross Bag </h2>
+            <p>Black Cross Bag </p>
+            <p class="price">From ₩10,000</p>
+          </a>
+        </div>
+        <div class="product">
+          <a href="compare_price.html?product=watch"> <!-- Link to the product detail page -->
+            <img src="icons/watch.jpeg" alt="Heart-Shaped Purse">
+            <h2>Apple Watch</h2>
+            <p>Apple Watch Series 5 <p>
+            <p class="price">From ₩10,000</p>
+          </a>
+        </div>
+      </div>
+      <button id="scrollRight" onclick="scrollRight()">▶</button>
+    </div>
+  </section>
   
   <footer>
     <p>&copy; 2024 PriceCompare. All rights reserved.</p>

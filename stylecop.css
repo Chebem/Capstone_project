@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    background-color: #333; /* Change this to the desired color */
+    color: #f5f5f5;
+    padding: 20px 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo-c .logo {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.c-letter {
+    color: burlywood; /* Red for the 'C' */
+}
+
+.mart {
+    color: rgb(142, 165, 42); /* White for 'Market' */
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Updated font */
+}
+
+.navbar a:hover {
+    color:rgb(142, 165, 42);; /* Change color on hover */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #f5f5f5;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons .social-icons a {
+    margin-right: 15px;
+    color: #f5f5f5;
+}
+
+.header-icons .social-icons a:hover {
+    color: darkmagenta;
+}
+
+/* Search Bar */
+.search-bar input {
+    padding: 10px;
+    border: 2px solid rgb(142, 165, 42);
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: rgb(142, 165, 42);;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: brown;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(142, 165, 42);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:brown;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(142, 165, 42);;
+}

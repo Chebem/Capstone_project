@@ -148,27 +148,27 @@
   </main>
 
   <div class="chatbot-container">
-    <div id="chatbot" class="floating-chat">
-      <button id="chatbot-toggle" aria-label="Chat with us">
+    <div id="chatbot" class="floating-chat" onclick="toggleChatbox()">
         <i class='bx bxs-chat'></i>
-      </button>
-      <span class="chat-tooltip">Chat with us!</span>
     </div>
-
-
-    <!-- Chatbox popup -->
-    <div class="chatbox">
-      <div class="chatbox-header">
-        <h3>Chat with us</h3>
-        <button class="close-chatbox">X</button>
-      </div>
-      <div id="chatbox-messages" class="chatbox-messages"></div>
-      <div class="chatbox-input">
-        <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
-        <button id="send-btn">Send</button>
-      </div>
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <h3>Chat with us</h3>
+            <button class="close-chatbox" onclick="toggleChatbox()">X</button>
+        </div>
+        <div id="chatbox-messages" class="chatbox-messages"></div>
+        <div class="chatbox-input">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+            <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+            <button id="send-btn" onclick="sendMessage()">Send</button>
+        </div>
     </div>
-  </div>
+</div>
   
   <div class="boxes-container">
     <div class="box women">

@@ -56,7 +56,7 @@ Follow these steps to set up and run the project locally:
    ```
 
 4. **Visit the Website**
-   - Open your browser and go to `http://localhost:3000`
+   - Open your browser and go to `https://chebem.github.io/Capstone_project/`
 
 ---
 

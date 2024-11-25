@@ -744,19 +744,8 @@ input:focus {
 .service-nav a:hover {
   color: darkmagenta;
 }
-.footer {
-  background-color: darkmagenta;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 
-/*Chatbot container*/
-.floating-chat 
-{
+.floating-chat {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -765,8 +754,7 @@ input:focus {
   align-items: center;
 }
 
-#chatbot-toggle 
-{
+#chatbot-toggle {
   background-color: rgb(13, 3, 58);
   border-radius: 50%;
   padding: 15px;
@@ -776,13 +764,11 @@ input:focus {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-#chatbot-toggle:hover 
-{
+#chatbot-toggle:hover {
   background-color: #0056b3;
 }
 
-.chat-tooltip 
-{
+.chat-tooltip {
   margin-left: 10px;
   font-size: 16px;
   background-color: rgb(13, 3, 58);
@@ -794,14 +780,12 @@ input:focus {
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.floating-chat:hover .chat-tooltip 
-{
+.floating-chat:hover .chat-tooltip {
   visibility: visible;
   opacity: 1;
 }
 
-.chatbox 
-{
+.chatbox {
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -814,8 +798,7 @@ input:focus {
   z-index: 1001; /* Ensure it appears on top */
 }
 
-.chatbox-header 
-{
+.chatbox-header {
   background-color: rgb(13, 3, 58);
   padding: 10px;
   color: white;
@@ -824,34 +807,29 @@ input:focus {
   align-items: center;
 }
 
-.chatbox-messages
- {
+.chatbox-messages {
   padding: 10px;
   max-height: 300px;
   overflow-y: auto;
 }
 
-.chatbox-input 
-{
+.chatbox-input {
   display: flex;
   padding: 10px;
   background-color: #f0f0f0;
 }
 
-.chatbox-input input
-{
+.chatbox-input input {
   flex-grow: 1;
   border: none;
   padding: 10px;
   border-radius: 4px;
   margin-right: 10px;
-  background-color: rgb(13, 3, 58);
-  color: white; /* Set text color for better readability */
+  background-color:rgb(13, 3, 58);
 }
 
-.chatbox-input button 
-{
-  background-color: #0056b3;
+.chatbox-input button {
+  background-color:#0056b3;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -859,20 +837,8 @@ input:focus {
   cursor: pointer;
 }
 
-.chatbox.visible 
-{
+.chatbox.visible {
   display: block; /* Show when visible class is added */
-}
-
-.chatbox-input input:focus 
-{
-  outline: none; /* Remove default outline on focus */
-  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Optional: add focus effect */
-}
-
-.chatbox-input button:hover 
-{
-  background-color: #003d80; /* Darken button on hover */
 }
 
 

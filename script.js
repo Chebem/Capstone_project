@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to send message to the OpenAI API
   async function sendMessageToAPI(message) {
-      const apiKey = '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' // Insert your actual OpenAI API key here
+      const apiKey =  // Insert your actual OpenAI API key here
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {

@@ -41,8 +41,8 @@ async function fetchProductData() {
       priceList.appendChild(li);
     });
   } catch (error) {
-    console.error("Error fetching product data:", error.message);
-    document.getElementById("productTitle").textContent = error.message;
+    document.getElementById("productTitle").textContent =
+      "Product not found, please check the product name or select another one";
   }
 }
 

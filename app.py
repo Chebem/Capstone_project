@@ -13,8 +13,6 @@ load_dotenv()
 # Initialize Flask app
 app = Flask(__name__)
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 # Load static product data from JSON file
 def load_static_products():
@@ -30,7 +28,6 @@ def load_static_products():
     
 @app.route('/compare', methods=['GET'])
 def compare_prices():
-    logging.warning(request.args.get('product', ''))
     product_name = request.args.get('product', '').strip().lower()
 
     # Check if product_name is provided, if not return error
@@ -39,7 +36,6 @@ def compare_prices():
 
     # Fetch static product data
     static_products = load_static_products()
-    logging.warning("static",static_products)
     static_product = next((p for p in static_products if p["title"].lower() == product_name), None)
 
     if not static_product:

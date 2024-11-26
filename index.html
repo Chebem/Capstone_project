@@ -54,9 +54,9 @@
         <a href="#" class="user-icon" aria-label="User Profile"><i class='bx bx-user'></i></a>
       </div>
       <form action="#" class="search-bar" method="get">
-        <input type="text" placeholder="Find the best deals..." aria-label="Search">
+        <input id="search-input" type="text" placeholder="Find the best deals..." aria-label="Search">
         <button type="submit"><i class='bx bx-search'></i></button>
-      </form>
+      </form>      
     </div>
   </header>
   
@@ -148,27 +148,27 @@
   </main>
 
   <div class="chatbot-container">
-    <div id="chatbot" class="floating-chat" onclick="toggleChatbox()">
+    <div id="chatbot" class="floating-chat">
+      <button id="chatbot-toggle" aria-label="Chat with us">
         <i class='bx bxs-chat'></i>
+      </button>
+      <span class="chat-tooltip">Chat with us!</span>
     </div>
-    <div class="chatbox" id="chatbox">
-        <div class="chatbox-header">
-            <h3>Chat with us</h3>
-            <button class="close-chatbox" onclick="toggleChatbox()">X</button>
-        </div>
-        <div id="chatbox-messages" class="chatbox-messages"></div>
-        <div class="chatbox-input">
-            <select id="language-select">
-                <option value="en">English</option>
-                <option value="ko">Korean</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-            </select>
-            <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
-            <button id="send-btn" onclick="sendMessage()">Send</button>
-        </div>
+
+
+    <!-- Chatbox popup -->
+    <div class="chatbox">
+      <div class="chatbox-header">
+        <h3>Chat with us</h3>
+        <button class="close-chatbox">X</button>
+      </div>
+      <div id="chatbox-messages" class="chatbox-messages"></div>
+      <div class="chatbox-input">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+        <button id="send-btn">Send</button>
+      </div>
     </div>
-</div>
+  </div>
   
   <div class="boxes-container">
     <div class="box women">
@@ -192,64 +192,65 @@
       <button id="scrollLeft" onclick="scrollLeft()">◀</button>
       <div class="product-grid">
         <div class="product">
-          <a href="compare_price.html?product=purse"> <!-- Link to the product detail page -->
-            <img src="icons/purse.jpeg" alt="Heart-Shaped Purse">
-            <h2>Heart-Shaped Purse</h2>
-            <p>Heart-Shaped Purse (Black)</p>
-            <p class="price">From ₩10,000</p>
+          <a href="compare_price.html?product=Heart-Shaped%20Purse">
+              <img src="icons/purse.jpeg" alt="Heart-Shaped Purse">
+              <h2>Heart-Shaped Purse</h2>
+              <p>Heart-Shaped Purse (Black)</p>
+              <p class="price">From ₩10,000</p>
           </a>
-        </div>
-  
-        <div class="product">
-          <a href="compare_price.html?product=airpodcase"> <!-- Link to the product detail page -->
-            <img src="icons/airpodcase.jpeg" alt="Apple Airpod Case">
-            <h2>Apple Airpod Case</h2>
-            <p>Peach Juice Airpod Case</p>
-            <p class="price">From ₩33,000</p>
+      </div>
+      
+      <div class="product">
+          <a href="compare_price.html?product=Apple%20Airpod%20Case">
+              <img src="icons/airpodcase.jpeg" alt="Apple Airpod Case">
+              <h2>Apple Airpod Case</h2>
+              <p>Peach Juice Airpod Case</p>
+              <p class="price">From ₩33,000</p>
           </a>
-        </div>
-  
-        <div class="product">
-          <a href="compare_price.html?product=phonecase"> <!-- Link to the product detail page -->
-            <img src="icons/phonecase.jpeg" alt="Heart-Shaped Purse">
-            <h2>Galaxy S22+ Case</h2>
-            <p>Galaxy S22+ Phone Case, abstract base design</p>
-            <p class="price">From ₩25,000</p>
+      </div>
+      
+      <div class="product">
+          <a href="compare_price.html?product=Galaxy%20S22%2B%20Case">
+              <img src="icons/phonecase.jpeg" alt="Galaxy S22+ Case">
+              <h2>Galaxy S22+ Case</h2>
+              <p>Galaxy S22+ Phone Case, abstract base design</p>
+              <p class="price">From ₩10,000</p>
           </a>
-        </div>
-
-        <div class="product">
-          <a href="compare_price.html?product=handbag"> <!-- Link to the product detail page -->
-            <img src="icons/handbag.jpeg" alt="Heart-Shaped Purse">
-            <h2>Pink Ribbon Bag</h2>
-            <p>BlackPink Pink Shaped Ribbon bag</p>
-            <p class="price">From ₩87,000</p>
+      </div>
+      
+      <div class="product">
+          <a href="compare_price.html?product=Pink%20Ribbon%20Bag">
+              <img src="icons/handbag.jpeg" alt="Pink Ribbon Bag">
+              <h2>Pink Ribbon Bag</h2>
+              <p>BlackPink Pink Shaped Ribbon Bag</p>
+              <p class="price">From ₩10,000</p>
           </a>
-        </div>
-  
-        <div class="product">
-          <a href="compare_price.html?product=bag"> <!-- Link to the product detail page -->
-            <img src="icons/bag.jpeg" alt="Heart-Shaped Purse">
-            <h2>Cross Bag </h2>
-            <p>Black Cross Bag </p>
-            <p class="price">From ₩49,000</p>
+      </div>
+      
+      <div class="product">
+          <a href="compare_price.html?product=Cross%20Bag%20(Black)">
+              <img src="icons/bag.jpeg" alt="Cross Bag (Black)">
+              <h2>Cross Bag</h2>
+              <p>Black Cross Bag</p>
+              <p class="price">From ₩10,000</p>
           </a>
-        </div>
-        <div class="product">
-          <a href="compare_price.html?product=watch"> <!-- Link to the product detail page -->
-            <img src="icons/watch.jpeg" alt="Heart-Shaped Purse">
-            <h2>Apple Watch</h2>
-            <p>Apple Watch Series 5 <p>
-            <p class="price">From ₩299,000</p>
+      </div>
+      
+      <div class="product">
+          <a href="compare_price.html?product=Apple%20Watch">
+              <img src="icons/watch.jpeg" alt="Apple Watch">
+              <h2>Apple Watch</h2>
+              <p>Apple Watch Series 5</p>
+              <p class="price">From ₩10,000</p>
           </a>
-        </div>
+      </div>      
       </div>
       <button id="scrollRight" onclick="scrollRight()">▶</button>
     </div>
   </section>
   
   <footer>
-    <p>&copy; 2024 C MARKET. All rights reserved.</p>
+    <p>&copy; 2024 PriceCompare. All rights reserved.</p>
   </footer>
 </body>
 </html>

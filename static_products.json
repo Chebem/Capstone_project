@@ -1,7 +1,7 @@
 {
     "static_products": [
       {
-        "image": "icons/purse.jpeg",
+        "image": "/static/icons/purse.jpeg",
         "title": "Heart-Shaped Purse(Black)",
         "prices": [
           {"website": "C-Market", "price": "₩10,000", "link": "c-market.html"},
@@ -11,7 +11,7 @@
         ]
       },
       {
-        "image": "icons/airpodcase.jpeg",
+        "image": "/static/icons/airpodcase.jpeg",
         "title": "Peach Juice Airpod Case",
         "prices": [
           {"website": "C-Market", "price": "₩39,000", "link": "c-market.html"},
@@ -21,7 +21,7 @@
         ]
       },
       {
-        "image": "icons/phonecase.jpeg",
+        "image": "/static/icons/phonecase.jpeg",
         "title": "Galaxy S22+ Case",
         "prices": [
           {"website": "C-Market", "price": "₩29,000", "link": "c-market.html"},
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "image": "icons/handbag.jpeg",
+        "image": "/static/icons/handbag.jpeg",
         "title": "Pink Ribbon Bag",
         "prices": [
           {"website": "C-Market", "price": "₩89,000", "link": "c-market.html"},
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "image": "icons/bag.jpeg",
+        "image": "/static/icons/bag.jpeg",
         "title": "Cross Bag (Black)",
         "prices": [
           {"website": "C-Market", "price": "₩49,000", "link": "c-market.html"},
@@ -51,7 +51,7 @@
         ]
       },
       {
-        "image": "icons/watch.jpeg",
+        "image": "/static/icons/watch.jpeg",
         "title": "Apple Watch",
         "prices": [
           {"website": "C-Market", "price": "₩299,000", "link": "c-market.html"},

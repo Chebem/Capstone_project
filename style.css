@@ -744,15 +744,6 @@ input:focus {
 .service-nav a:hover {
   color: darkmagenta;
 }
-.footer {
-  background-color: darkmagenta;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 
 /*Chatbot container*/
 .floating-chat 
@@ -874,6 +865,7 @@ input:focus {
 {
   background-color: #003d80; /* Darken button on hover */
 }
+
 
 
 

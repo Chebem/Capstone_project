@@ -1,12 +1,25 @@
 from flask import Flask, request, jsonify, render_template, send_from_directory
 import logging
-
+import logging
 # Configure basic logging
 
 import json
 import os
 from dotenv import load_dotenv
-
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,  # Can be changed to INFO, WARNING, etc.
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler()  # Will log to the console
+    ]
+)
+logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('app.log')
+file_handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 load_dotenv()
 app = Flask(__name__)
@@ -23,15 +36,21 @@ def load_static_products():
             data = json.load(file)
             products = data.get('static_products', [])
             print(f'DEBUG: Loaded {len(products)} products')
+            logger.warning(f'DEBUG: Loaded {len(products)} products')
             return products
     except FileNotFoundError:
-        print(f'Error: static_products.json not found at {json_path}')
+        logger.warning(f'Error: File static_products.json not found at {json_path}')
+        print(f'Error: File static_products.json not found at {json_path}')
         return []
     except json.JSONDecodeError as e:
-        print(f"Error reading JSON: {e}")
+        logger.warning(f"Error File reading JSON: {e}")
+        print(f"Error File reading JSON: {e}")
         return []
     except Exception as e:
-        print(f"Unexpected error loading products: {e}")
+        logger.warning(f"Unexpected error loading products: {e}")
+        print(f"Unexpected File error loading products: {e}")
+
+
         return []
 
 

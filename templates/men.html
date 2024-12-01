@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Products</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo-c">
+        <a href="index.html" class="logo"><span class="c-letter">T</span>
+          <span class="mart">he</span>
+          <span class="c-letter">T</span>
+          <span class="mart">ime</span>
+        </a>
+      </div>
+      <div class="dropdown">
+        <a href="#">New</a>
+      </div>
+      <div class="dropdown">
+        <a href="#">Men</a>
+        <div class="dropdown-content">
+          <a href="men.html">Men Clothing</a>
+          <a href="men.html">Men's Shoes</a>
+          <a href="men.html">Accessories</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Women</a>
+        <div class="dropdown-content">
+          <a href="women.html">Women's Clothing</a>
+          <a href="women.html">Women's Shoes</a>
+          <a href="women.html">Accessories</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Appliances</a>
+        <div class="dropdown-content">
+          <a href="appliances.html">Computers</a>
+          <a href="appliances.html">Cell-Phones</a>
+          <a href="appliances.html">Headphones</a>
+          <a href="appliances.html">Home Electronic Appliances</a>
+        </div>
+      </div>
+      <a href="about.html" class="scroll-link">About</a>
+      <a href="#">Contact</a>
+    </nav>
+ 
+    <div class="header-icons">
+      <div class="social-icons">
+        <a href="#" aria-label="Shopping Cart"><i class='bx bxs-cart'></i></a>
+        <a href="#" class="user-icon" aria-label="User Profile"><i class='bx bx-user'></i></a>
+      </div>
+      <form action="#" class="search-bar" method="get">
+        <input id="search-input" type="text" placeholder="Find the best deals..." aria-label="Search">
+        <button type="submit"><i class='bx bx-search'></i></button>
+      </form>      
+    </div>
+  </header>
+  <main class="container">
+  
+
+  <!-- Men's Clothing Section -->
+<div id="men-clothing" class="product-category">
+  <h2>Men's Clothing</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="/static/icons/denim_jacket.jpg" alt="Classic Denim Jacket">
+      <h2>Oversized Denim Jacket</h2>
+      <a href="compare_price.html?product=Oversized%20Denim%20Jacket" class="btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <img src="/static/icons/black_jumper.jpg" alt="Black Wool Jacket">
+      <h2>Black Wool Jacket</h2>
+      <a href="compare_price.html?product=Black%20Wool%20Jacket" class="btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <img src="/static/icons/black_padding.jpg" alt="Quilted Black Jacket">
+      <h2>Quilted Black Jacket</h2>
+      <a href="compare_price.html?product=Quilted%20Black%20Jacket" class="btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Men's Accessories Section -->
+<div id="men-accessories" class="product-category">
+  <h2>Men's Accessories</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="/static/icons/silver_watch.jpg" alt="Black Stainless Steel Watch">
+      <h2>Black Stainless Steel Watch</h2>
+      <a href="compare_price.html?product=Black%20Stainless%20Steel%20Watch" class="btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <img src="/static/icons/silver_mring.jpg" alt="Minimalist Silver Ring">
+      <h2>Minimalist Silver Ring</h2>
+      <a href="compare_price.html?product=Minimalist%20Silver%20Ring" class="btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <img src="/static/icons/black_bracelet.jpg" alt="Braided Bracelet (Black)">
+      <h2>Braided Bracelet (Black)</h2>
+      <a href="compare_price.html?product=Braided%20Bracelet%20(Black)" class="btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Men's Shoes Section -->
+<div id="men-shoes" class="product-category">
+  <h2>Men's Shoes</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="/static/icons/brown-suede_dressshoes.jpg" alt="Classic Brown Loafers">
+      <h2>Classic Brown Loafers</h2>
+      <a href="compare_price.html?product=Classic%20Brown%20Loafers" class="btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <img src="/static/icons/black_sneakers.jpg" alt="Nike Air Max (Black)">
+      <h2>Nike Air Max (Black)</h2>
+      <a href="compare_price.html?product=Nike%20Air%20Max%20(Black)" class="btn">Buy Now</a>
+    </div>
+    <div class="product">
+      <img src="/static/icons/black_high_timberlands.jpg" alt="Black Combat Boots">
+      <h2>Black Combat Boots</h2>
+      <a href="compare_price.html?product=Black%20Combat%20Boots" class="btn">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+  <div class="chatbot-container">
+    <div id="chatbot" class="floating-chat">
+      <button id="chatbot-toggle" aria-label="Chat with us">
+        <i class='bx bxs-chat'></i>
+      </button>
+      <span class="chat-tooltip">Chat with us!</span>
+    </div>
+
+
+    <!-- Chatbox popup -->
+    <div class="chatbox">
+      <div class="chatbox-header">
+        <h3>Chat with us</h3>
+        <button class="close-chatbox">X</button>
+      </div>
+      <div id="chatbox-messages" class="chatbox-messages"></div>
+      <div class="chatbox-input">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>

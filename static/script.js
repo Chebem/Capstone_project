@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatboxMessages = document.getElementById("chatbox-messages");
   const searchBar = document.querySelector(".search-bar");
   const searchInput = document.getElementById("searchInput");
+  const scrollLinks = document.querySelectorAll(".scroll-link");
 
   // Toggle between login and register forms
   loginLink?.addEventListener("click", () => {
@@ -90,14 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
       // Handle API response
       if (data.choices && data.choices.length > 0) {
         const botMessage = data.choices[0].message.content;
-        chatboxMessages.innerHTML += `<p>C-Makky: ${botMessage}</p>`; // Display bot response
+        chatboxMessages.innerHTML += `<p>TT: ${botMessage}</p>`; // Display bot response
       } else {
-        chatboxMessages.innerHTML += `<p>C-Makky: I'm sorry, I couldn't process your request.</p>`;
+        chatboxMessages.innerHTML += `<p>TT: I'm sorry, I couldn't process your request.</p>`;
       }
       chatboxMessages.scrollTop = chatboxMessages.scrollHeight; // Scroll to the bottom
     } catch (error) {
       console.error("Error communicating with the chatbot API:", error);
-      chatboxMessages.innerHTML += `<p>C-Makky: There was an error processing your request.</p>`;
+      chatboxMessages.innerHTML += `<p>TT: There was an error processing your request.</p>`;
     }
   }
 
@@ -186,4 +187,22 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth",
     });
   }
+
+  //scrolling navigation
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all links with the class "scroll-link"
+
+    // Add click event listener to each link
+    scrollLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        const targetId = link.getAttribute("href"); // Get the href attribute (e.g., #clothing)
+        const targetElement = document.querySelector(targetId); // Find the target element by ID
+        if (targetElement) {
+          // Scroll to the target element smoothly
+          targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  });
 });

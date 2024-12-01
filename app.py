@@ -71,10 +71,8 @@ def home():
 # Route to serve HTML files from the templates folder
 @app.route('/<filename>')
 def serve_html(filename):
-    valid_files = [
-        "index.html", "21st_Street.html", "action.html",
-        "compare_price.html", "c-market.html", "copang.html"
-    ]
+   
+    valid_files = ["index.html", "21st-street.html", "action.html","compare_price.html", "c-market.html", "copang.html", "men.html","women.html", "appliances.html", "about.html"]
     if filename in valid_files:
         return render_template(filename)  # Automatically serves from 'templates/'
     return {"error": "File not found"}, 404

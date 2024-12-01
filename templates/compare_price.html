@@ -2,148 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <script src="/static/cpscript.js" defer></script>
-    <style>
-        /* Reset and Body Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Comparison</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <script src="/static/cpscript.js" defer></script>
+  <script src="/static/script.js" defer></script>
 
-        body {
-            background: #f9f9f9;
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px 12.5%;
-            /* Adjusted padding for better alignment */
-            background: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* Center items vertically */
-            z-index: 100;
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            font-size: 48px;
-            color: rgb(13, 3, 58);
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar a {
-            font-size: 15px;
-            color: rgb(13, 3, 58);
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 30px;
-        }
-
-        .navbar a:hover {
-            color: darkmagenta;
-        }
-
-        .main-product {
-            padding: 100px 12.5%;
-            /* Space for header */
-            text-align: center;
-            margin-top: 70px;
-            /* To avoid overlap with header */
-        }
-
-        .main-product img {
-            max-width: 300px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .product-title {
-            font-size: 24px;
-            color: rgb(13, 3, 58);
-            margin-bottom: 10px;
-        }
-
-        .price-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .price-list li {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .price-list a {
-            text-decoration: none;
-            color: darkmagenta;
-            font-weight: bold;
-        }
-
-        .footer {
-            background-color: darkmagenta;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">C MARKET</div>
-        <nav class="navbar">
-            <a href="#">New</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Appliances</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo-c">
+        <a href="index.html" class="logo"><span class="c-letter">T</span>
+          <span class="mart">he</span>
+          <span class="c-letter">T</span>
+          <span class="mart">ime</span>
+        </a>
+      </div>
+      <div class="dropdown">
+        <a href="#">New</a>
+      </div>
+      <div class="dropdown">
+        <a href="#">Men</a>
+        <div class="dropdown-content">
+          <a href="men.html">Men Clothing</a>
+          <a href="men.html">Men's Shoes</a>
+          <a href="men.html">Accessories</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Women</a>
+        <div class="dropdown-content">
+          <a href="women.html">Women's Clothing</a>
+          <a href="women.html">Women's Shoes</a>
+          <a href="women.html">Accessories</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Appliances</a>
+        <div class="dropdown-content">
+          <a href="ai-information.html">Computers</a>
+          <a href="appliances.html">Cell-Phones</a>
+          <a href="appliances.html">Headphones</a>
+          <a href="appliances.html">Home Electronic Appliances</a>
+        </div>
+      </div>
+      <a href="about.html" class="scroll-link">About</a>
+      <a href="#">Contact</a>
+    </nav>
 
-    <section class="main-product">
-        <img id="productImage" src="/static/icons/logo.png" alt="Product Image">
-        <h1 id="productTitle" class="product-title">Loading...</h1>
-        <ul id="priceList" class="price-list"></ul>
-    </section>
+    <div class="header-icons">
+      <div class="social-icons">
+        <a href="#" aria-label="Shopping Cart"><i class='bx bxs-cart'></i></a>
+        <a href="#" class="user-icon" aria-label="User Profile"><i class='bx bx-user'></i></a>
+      </div>
+      <form action="#" class="search-bar" method="get">
+        <input id="search-input" type="text" placeholder="Find the best deals..." aria-label="Search">
+        <button type="submit"><i class='bx bx-search'></i></button>
+      </form>
+    </div>
+  </header>
+
+
+  <section class="main-product">
+    <img id="productImage" src="/static/icons/logo.png" alt="Product Image">
+    <h1 id="productTitle" class="product-title">Loading...</h1>
+    <ul id="priceList" class="price-list"></ul>
+  </section>
+
+  <div class="chatbot-container">
+    <div id="chatbot" class="floating-chat">
+      <button id="chatbot-toggle" aria-label="Chat with us">
+        <i class='bx bxs-chat'></i>
+      </button>
+      <span class="chat-tooltip">Chat with us!</span>
+    </div>
+
+
+    <!-- Chatbox popup -->
+    <div class="chatbox">
+      <div class="chatbox-header">
+        <h3>Chat with us</h3>
+        <button class="close-chatbox">X</button>
+      </div>
+      <div id="chatbox-messages" class="chatbox-messages"></div>
+      <div class="chatbox-input">
+        <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
 
 
 
 
-    <footer class="footer">
-        <p>&copy; 2024 C MARKET. All rights reserved.</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy; 2024 TT The Time. All rights reserved.</p>
+  </footer>
 
 
 

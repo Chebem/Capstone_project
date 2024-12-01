@@ -153,30 +153,6 @@
 
 
   </main>
-
-  <div class="chatbot-container">
-    <div id="chatbot" class="floating-chat">
-      <button id="chatbot-toggle" aria-label="Chat with us">
-        <i class='bx bxs-chat'></i>
-      </button>
-      <span class="chat-tooltip">Chat with us!</span>
-    </div>
-
-
-    <!-- Chatbox popup -->
-    <div class="chatbox">
-      <div class="chatbox-header">
-        <h3>Chat with us</h3>
-        <button class="close-chatbox">X</button>
-      </div>
-      <div id="chatbox-messages" class="chatbox-messages"></div>
-      <div class="chatbox-input">
-        <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
-        <button id="send-btn">Send</button>
-      </div>
-    </div>
-  </div>
-
   <div class="boxes-container">
     <div class="box women">
       <a href="women.html" class="text-box">Women</a>
@@ -292,6 +268,19 @@
   <footer>
     <p>&copy; 2024 PriceCompare. All rights reserved.</p>
   </footer>
+    <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '674c7e75d4ab32a52db0de9c' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 </body>
 
 </html>

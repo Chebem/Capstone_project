@@ -7,51 +7,65 @@ import json
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
 
-# Initialize Flask app
+load_dotenv()
 app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 
 # Load static product data from JSON file
 def load_static_products():
+    json_path = os.path.join(BASE_DIR, 'static_products.json')
     try:
-        with open("static_products.json", "r", encoding="utf-8") as file:
-            return json.load(file).get("static_products", [])
+        print(f'DEBUG: Attempting to load JSON from {json_path}')
+        with open(json_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            products = data.get('static_products', [])
+            print(f'DEBUG: Loaded {len(products)} products')
+            return products
     except FileNotFoundError:
-        print("Error: static_products.json not found.")
+        print(f'Error: static_products.json not found at {json_path}')
         return []
     except json.JSONDecodeError as e:
         print(f"Error reading JSON: {e}")
         return []
-    
+    except Exception as e:
+        print(f"Unexpected error loading products: {e}")
+        return []
+
+
 @app.route('/compare', methods=['GET'])
 def compare_prices():
-    product_name = request.args.get('product', '').strip().lower()
-
-    # Check if product_name is provided, if not return error
+    product_name = request.args.get('product','').strip().lower()
+    print(f'DEBUG: Searching for product: "{product_name}"')
+    
     if not product_name:
-        return jsonify({"error": "No product provided"}), 400
-
-    # Fetch static product data
+        return jsonify({'error':'No product provided'}),400
+    
     static_products = load_static_products()
-    static_product = next((p for p in static_products if p["title"].lower() == product_name), None)
-
+    
+    # Debug: Print all product titles
+    print('DEBUG: Available products:')
+    for product in static_products:
+        print(f'- "{product["title"].lower()}"')
+        if(product["title"].lower() == product_name):
+            print('\033[1mSEEN A MATCH :', "search", product_name, "=", 'result:', product["title"].lower(), '\033[0m')
+        else:
+             print('Not a match:', "search",product_name,"=",'result:',product["title"].lower())
+    static_product = next((p for p in static_products if p['title'].lower() == product_name), None)
+    
     if not static_product:
-        return jsonify({"error": "Product not found."}), 404
-
-    # Return static product data
-    return jsonify({
-        "product": static_product["title"],
-        "image": static_product["image"],
-        "prices": static_product["prices"]
-    })
+        print(f'DEBUG: No product found for "{product_name}"')
+        return jsonify({'error':'Product not found.'}),404
+    
+    return jsonify({'product':static_product['title'],'image':static_product['image'],'prices':static_product['prices']})
 
 # Search for products
 @app.route('/search', methods=['GET'])
 def search_products():
     query = request.args.get('query', '').strip().lower()
+
     if not query:
         return jsonify({"error": "No search query provided"}), 400
 

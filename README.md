@@ -3,7 +3,7 @@
 # 🛒 Price Comparison Website
 
 **Welcome to our Price Comparison Platform!**  
-Our goal is to help you find the best deals on products across multiple online stores. With a user-friendly interface, language support, and an intelligent chatbot assistant, we make shopping for the best price as easy and seamless as possible!
+The goal is to help you find the best deals on products across multiple online stores. With a user-friendly interface, language support, and an intelligent chatbot assistant, we make shopping for the best price as easy and seamless as possible!
 
 ---
 
